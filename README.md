@@ -3,7 +3,6 @@
 ## Project information
  - Name: Utils 
  - Version: 1
- - Legacy version 14: https://bitbucket.org/metascan/mcl-metadefender-rest/src/master/
 
 ## Setting up local environment
 
