@@ -1,4 +1,4 @@
-import { CommonUtils } from '../utils/common';
+import { CommonUtils } from './common';
 
 const utils = new CommonUtils();
 describe('CommonUtils', () => {

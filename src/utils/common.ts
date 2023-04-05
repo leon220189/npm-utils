@@ -1,4 +1,3 @@
-import * as moment from 'moment';
 import { randomUUID } from 'crypto';
 
 export class CommonUtils {
@@ -31,7 +30,10 @@ export class CommonUtils {
    * @returns {string} a unique id
    */
   generateUUId() {
-    return randomUUID().split('-').pop() + moment.utc().format('x');
+    const currentTime: number = new Date().getTime();
+    const randomString: any = randomUUID().split('-').pop();
+    const uuid = randomString + currentTime;
+    return uuid;
   }
 
   /**
