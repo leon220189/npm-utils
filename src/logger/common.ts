@@ -51,3 +51,7 @@ export const stringToLevel = function (level: string | undefined): Level {
 
   return Level.INFO;
 };
+
+export const fetchStringByLevel = function (level: number): (string | Level)[] {
+  return Object.values(Level).filter((v) => isNaN(Number(v))).slice(level);
+}
