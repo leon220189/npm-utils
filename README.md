@@ -113,9 +113,9 @@ it('Should return array [1,"1",2,3,4]', async () => {
 });
 ```
 
-#### Logger updating
+#### Logger module
 
-Alternatively, you can use return promises instead of using the `done` callback:
+Print log message to console, or record it as file
 
 ```javascript
 import * as log from './index.js';
