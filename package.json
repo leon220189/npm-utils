@@ -13,8 +13,9 @@
     "npm": ">=7.0.0",
     "node": ">=16.0.0"
   },
-  "publishConfig": {
-    "Repository": "https://github.com/leon220189/npm-utils"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leon220189/npm-utils.git"
   },
   "author": "binhle",
   "license": "UNLICENSED",
