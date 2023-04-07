@@ -1,7 +1,7 @@
 {
   "name": "utils-binh",
   "version": "0.0.1",
-  "description": "Some function helpful to reuse",
+  "description": "Some function helpful to reuse, and logs module",
   "main": "index.js",
   "private": true,
   "type": "module",
@@ -28,9 +28,5 @@
     "typescript": "^5.0.3"
   },
   "dependencies": {
-    "@supercharge/request-ip": "^1.2.0",
-    "cache-manager": "3.6.1",
-    "cache-manager-redis-store": "2.0.0",
-    "moment": "^2.29.4"
   }
 }
