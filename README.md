@@ -118,22 +118,29 @@ it('Should return array [1,"1",2,3,4]', async () => {
 Alternatively, you can use return promises instead of using the `done` callback:
 
 ```javascript
-videoQueue.process(function (job) {
-  // don't forget to remove the done callback!
-  // Simply return a promise
-  return fetchVideo(job.data.url).then(transcodeVideo);
+import * as log from './index.js';
+let logLevel = process.env.LOG_LEVEL; // if process.env.LOG_LEVEL undefined logLevel default value is 'info'
 
-  // Handles promise rejection
-  return Promise.reject(new Error('error transcoding'));
+// set config init log module
+/**
+ * @param {*} componentName — define name intance log.
+ * @param {*} level — level log expect to display.
+ * @param {*} console — print logs to console.
+ * @param {*} record — record logs to files.
+ * @param {*} extras — extras params.
+ */
+log.initEnv( componentName: string, level?: string, console?: boolean, record?: boolean, extras?: Array<any>);
 
-  // Passes the value the promise is resolved with to the "completed" event
-  return Promise.resolve({ framerate: 29.5 /* etc... */ });
+// sample
+log.initEnv('log-test', 'info', true);
 
-  // If the job throws an unhandled exception it is also handled correctly
-  throw new Error('some unexpected error');
-  // same as
-  return Promise.reject(new Error('some unexpected error'));
-});
+log.debug(`Testing logger debug`);
+log.info(`Testing logger info ${ JSON.stringify({logLevel: logLevel, LOG_LEVEL: process.env.LOG_LEVEL})}`);
+log.warning(`Testing logger warning`);
+log.error(`Testing logger error`);
+log.fatal(`Testing logger fatal`);
+log.access(`Testing logger access`);
+
 ```
 
 ```

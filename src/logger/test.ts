@@ -15,7 +15,7 @@ if (!process.env.LOG_LEVEL) {
     logLevel = process.env.LOG_LEVEL;
 }
 
-log.initEnv('log-test', undefined, true);
+log.initEnv('log-test', undefined, true, true);
 // log.initEnv('log-test', undefined, true, ['dev'], '/log-config/level');
 
 log.debug(`Testing logger debug`);

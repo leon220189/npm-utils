@@ -32,6 +32,7 @@ export const initEnv = function (
   componentName: string,
   level?: string,
   console?: boolean,
+  record?: boolean,
   extras?: Array<any>,
 ): void {
   logger.Logger.getInstance().setName(componentName);
@@ -52,7 +53,7 @@ export const initEnv = function (
     logger.Logger.getInstance().addOutput(new consoleOutput.ConsoleOutput());
   }
 
-  if (true) {
+  if (record) {
     const levelFilePath: string = getFilePath('level');
     checkFilePath(levelFilePath, common.stringToLevel(level ? level : 'info'));
     logger.Logger.getInstance().record = true;
