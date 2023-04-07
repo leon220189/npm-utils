@@ -1,9 +1,8 @@
 {
-  "name": "utils-binh",
+  "name": "binh-utils",
   "version": "0.0.1",
   "description": "Some function helpful to reuse, and logs module",
   "main": "build/index.js",
-  "private": true,
   "type": "module",
   "scripts": {
     "test": "jest",
