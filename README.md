@@ -31,7 +31,7 @@ $ npm run test
 #### Common Function
 
 ```js
-import { CommonUtils } from '@utils/abc';
+import { CommonUtils }  from 'utils-binh';
 
 const utils = new CommonUtils();
 
@@ -118,7 +118,7 @@ it('Should return array [1,"1",2,3,4]', async () => {
 Print log message to console, or record it as file
 
 ```javascript
-import * as log from './index.js';
+import { LogsUtils }  from 'utils-binh';
 let logLevel = process.env.LOG_LEVEL; // if process.env.LOG_LEVEL undefined logLevel default value is 'info'
 
 // set config init log module
@@ -132,7 +132,7 @@ let logLevel = process.env.LOG_LEVEL; // if process.env.LOG_LEVEL undefined logL
 log.initEnv( componentName: string, level?: string, console?: boolean, record?: boolean, extras?: Array<any>);
 
 // sample
-log.initEnv('log-test', 'info', true);
+log.initEnv('log-test', 'info', true, false);
 
 log.debug(`Testing logger debug`);
 log.info(`Testing logger info ${ JSON.stringify({logLevel: logLevel, LOG_LEVEL: process.env.LOG_LEVEL})}`);

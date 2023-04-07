@@ -1,4 +1,4 @@
-import * as log from './index.js';
+import { LogsUtils } from './index.js';
 
 declare var process: {
   env: {
@@ -6,7 +6,7 @@ declare var process: {
       ENV: string,
   }
 };
-
+const log = new LogsUtils();
 let logLevel = 'info';
 // process.env.LOG_LEVEL = 'error'
 if (!process.env.LOG_LEVEL) {
